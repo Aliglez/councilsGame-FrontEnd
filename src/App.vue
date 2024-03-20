@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import {  RouterView } from 'vue-router';
+import HeaderComponent from './components/elementals/HeaderComponent.vue';
+
 
 </script>
 
 <template>
   <header>
     
-    <div class="wrapper">
+    <!-- <div class="wrapper">
       
 
       <nav>
@@ -17,8 +19,11 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/registro">Registro</RouterLink>
         <RouterLink to="/login">Login</RouterLink>
       </nav>
-    </div>
+    </div> -->
+    
   </header>
+  
+  <HeaderComponent/>
 
   <RouterView />
 </template>
