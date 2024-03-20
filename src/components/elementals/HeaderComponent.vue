@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <Header>
+  <header>
     <div>
       <a class="navbar-brand" href="/">
         <img
@@ -69,7 +69,7 @@
         </div>
       </div>
     </nav>
-  </Header>
+  </header>
 </template>
 <style scoped lang="scss">
 @import "../../assets/variables";

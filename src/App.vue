@@ -8,27 +8,27 @@ import FooterComponent from './components/elementals/FooterComponent.vue';
 <template>
   <header>
     
-    <!-- <div class="wrapper">
+    <div class="wrapper">
       
 
-      <nav>
+      <!-- <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/reglas">Reglas</RouterLink>
         <RouterLink to="/concejos">Concejos</RouterLink>
         <RouterLink to="/retos">Retos</RouterLink>
         <RouterLink to="/registro">Registro</RouterLink>
         <RouterLink to="/login">Login</RouterLink>
-      </nav>
-    </div> -->
-    
+      </nav> -->
+    </div>
+    <HeaderComponent/> 
   </header>
   
-  <HeaderComponent/>
 
   <RouterView />
 
-
+<footer>
   <FooterComponent/>
+</footer>
 </template>
 
 <style scoped lang="scss">
