@@ -1,1 +1,10 @@
+@use 'scss-reset/reset';
 @import './base.scss';
+
+body, html {
+    width: 100vw;
+}
+
+a {
+    text-decoration: none;
+}
