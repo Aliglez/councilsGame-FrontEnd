@@ -1,4 +1,46 @@
 <script setup lang="ts">
+import { ref, type Ref } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+
+import { useAuthStore } from '@/stores/authStore';
+import type { IAuthUser } from '@/models/IAuthUser';
+import AuthService from '@/services/AuthService';
+
+
+const store = useAuthStore()
+const service = new AuthService()
+
+const input_email: Ref<string> = ref('')
+const input_password: Ref<string> = ref('')
+
+const route = useRoute()
+const router = useRouter()
+
+const login = async () => {
+
+  store.user.email = input_email.value
+
+  const data: IAuthUser = {
+    email: input_email.value,
+    password: input_password.value
+  }
+
+  const responseData = await service.login(data)
+  console.log(responseData)
+
+  if (input_email.value == store.user.email) {
+    store.user.isAuthenticated = responseData.isAuthenticated
+    store.user.roles = responseData.roles
+    const redirectPath = '/'
+    router.push(redirectPath)
+  }
+  
+}
+
+const username = ref('')
+const password = ref('')
+const isLoading = ref(false)
+
 
 </script>
 
@@ -13,6 +55,7 @@
             class="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
+            v-model="input_email"
             
           />
           <div id="emailHelp" class="form-text">
@@ -25,10 +68,11 @@
             type="password"
             class="form-control"
             id="exampleInputPassword1"
+            v-model="input_password"
             
           />
         </div>
-        <button id="btnEntrar" type="submit" class="btn btn-primary">Entrar</button>
+        <button id="btnEntrar" type="submit" class="btn btn-primary" :disabled="isLoading">{{ isLoading ? 'Logging in ...': 'LOGIN'}}</button>
         <p>¿Aún no estás registrado?</p>
         <a class="linkRegistro" href="/registro">Hazlo aquí</a>
       </form>
