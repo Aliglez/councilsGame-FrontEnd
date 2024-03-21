@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import CouncilsCards from '@/components/councils/CouncilsCards.vue';
+
+
+</script>
 
 <template>
   <main>
@@ -17,6 +21,10 @@
       </div>
         
       </div>
+      <div class="councilsCardContainer">
+        <CouncilsCards/>
+        </div>
+
     
   </main>
 </template>
