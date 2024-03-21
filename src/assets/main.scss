@@ -1,1 +1,13 @@
-@import './base.css';
+@use 'scss-reset/reset';
+@import './variables';
+@import './base.scss';
+
+body, html {
+    width: 100vw;
+
+    font-family: $first-font;
+}
+
+a {
+    text-decoration: none;
+}
