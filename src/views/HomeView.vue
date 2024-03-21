@@ -14,6 +14,12 @@
         </p>
       </div>
     </div>
+    <div>
+      <p class="hometext">
+        Imagina un juego que te lleva a explorar la rica y diversa geografía de Asturias, desde sus majestuosas montañas hasta sus playas más salvajes, pasando por sus ciudades históricas y sus encantadores pueblos. Este juego no es solo una forma de pasar el rato, sino una aventura que te permite descubrir los tesoros ocultos de Asturias, ganando puntos por cada lugar que visitas.
+ 
+      </p>
+    </div>
   </main>
 </template>
 <style scoped lang="scss">
@@ -41,5 +47,13 @@
   @media screen and (max-width: 600px) {
     font-size: 1rem;
   }
+}
+
+.hometext {
+  font-family: $first-font;
+  color: $dark-blue;
+  font-size: 1.2rem;
+  padding: 2%;
+  text-align: center;
 }
 </style>
