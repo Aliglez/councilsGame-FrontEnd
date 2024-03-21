@@ -35,6 +35,10 @@ import TrialCard from '../components/cards/TrialCard.vue';
   border: none;
 }
 
+.card-img {
+  width: 70%;
+}
+
 .card-img-overlay {
   display: flex;
   flex-direction: row-reverse;
