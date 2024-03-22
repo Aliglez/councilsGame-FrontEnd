@@ -15,7 +15,7 @@ const fetchCouncils = async () => {
   console.log(response.data);
 
 }
-fetchCouncils;
+fetchCouncils();
   
   const photos = [
     '/src/assets/img/Gijon.jpg',
