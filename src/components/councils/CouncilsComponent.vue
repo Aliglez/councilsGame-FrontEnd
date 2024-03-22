@@ -15,13 +15,16 @@ const fetchCouncils = async () => {
     allCouncils.value  = response.data;
     console.log(response.data);
 }
-fetchCouncils;
+fetchCouncils();
 
 
 </script>
 <template>
-    <div class="councilLink">
+    <div class="councilLink" >
+        
         <a v-for="councils in allCouncils" v-bind:value ="councils.nameOfCouncil" :key="councils.id_council" href="#" class="badge badge-light">{{ councils.nameOfCouncil }}</a>
+        
+        <!-- <a href="#" class="badge badge-light ">prueba</a> -->
     </div>
 </template>
 <style scoped lang="scss">
@@ -30,5 +33,6 @@ fetchCouncils;
 a {
     font-family: $first-font;
     color: $dark-blue;
+    text-decoration: none;
 }
 </style>

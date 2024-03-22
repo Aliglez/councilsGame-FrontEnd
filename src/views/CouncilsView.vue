@@ -11,7 +11,7 @@ import CouncilsComponent from '@/components/councils/CouncilsComponent.vue';
     <div class="councilsContainer">
       <div class="council-text">
           <p class="card-text">
-            Gijón ~ Oviedo ~ Avilés ~ Pola Siero ~ Llanes
+            
             <CouncilsComponent/>
           </p>
         </div>
