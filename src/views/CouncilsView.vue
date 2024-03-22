@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import CouncilsCards from '@/components/councils/CouncilsCards.vue';
+import CouncilsComponent from '@/components/councils/CouncilsComponent.vue';
+
 
 
 </script>
@@ -10,6 +12,7 @@ import CouncilsCards from '@/components/councils/CouncilsCards.vue';
       <div class="council-text">
           <p class="card-text">
             Gijón ~ Oviedo ~ Avilés ~ Pola Siero ~ Llanes
+            <CouncilsComponent/>
           </p>
         </div>
       <div class="card text-white">
