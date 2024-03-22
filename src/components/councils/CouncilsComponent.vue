@@ -15,7 +15,7 @@ const fetchCouncils = async () => {
     allCouncils.value  = response.data;
     console.log(response.data);
 }
-fetchCouncils;
+fetchCouncils();
 
 
 </script>
@@ -30,5 +30,6 @@ fetchCouncils;
 a {
     font-family: $first-font;
     color: $dark-blue;
+    text-decoration: none;
 }
 </style>
